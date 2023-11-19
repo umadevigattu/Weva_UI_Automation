@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.Weva.constants.Constants;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -13,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class CommonUtils {
 	public static ArrayList<String> list = new ArrayList<String>();
 
-	public static String getCurrentDate() { // TODO Auto-generated method stub
+	public static String getCurrentDate() { 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("_ddMMyyyy_HHmmss");
 		Date date = new Date();
 		return dateFormat.format(date);
@@ -21,8 +22,7 @@ public class CommonUtils {
 	}
 
 	public static <list> ArrayList<list> ExcelReader() throws Exception {
-		String path = "C:\\Users\\91944\\Downloads\\LoginTestData.xlsx";
-		FileInputStream fis = new FileInputStream(path);
+		FileInputStream fis = new FileInputStream(Constants.LoginTestData);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		Sheet sheet = workbook.getSheetAt(0);

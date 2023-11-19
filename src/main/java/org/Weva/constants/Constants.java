@@ -14,6 +14,7 @@ public class Constants {
 
 	public static final String TestReportsPath = System.getProperty("user.dir") + "/VedhaTestReports/VedhaReports"
 			+ CommonUtils.getCurrentDate() + ".html";
+	public static final String LoginTestData = System.getProperty("user.dir")+"\\InputFiles\\LoginTestData.xlsx";
 
 //	public static final String Loggers = System.getProperty("user.dir") + "./src/main/resources/log4j.properties";
 	

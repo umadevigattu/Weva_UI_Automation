@@ -20,7 +20,7 @@ public class WevaLogin extends BaseTest {
 
 	@Test
 	public void LoginTest() throws Exception {
-
+		 String currentDirectory = System.getProperty("user.dir");
 		wevaUtils.WevaLogin_muliple(seleniumUtilities);
 		System.out.println("Test Passed successfully");
 
