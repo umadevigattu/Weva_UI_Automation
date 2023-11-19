@@ -3,6 +3,7 @@ package org.Weva.WevaReusables;
 import java.io.FileInputStream;
 
 import org.Weva.baseclass.BaseTest;
+import org.Weva.constants.Constants;
 import org.Weva.objectrepository.WevaLoginPage;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -27,14 +28,13 @@ public class WevaUtils extends BaseTest {
 	}
 
 	public void WevaLogin_muliple(SeleniumUtilities seleniumUtilities) throws Exception {
-		String path = "C:\\Users\\91944\\Downloads\\LoginTestData.xlsx";
-		FileInputStream fis = new FileInputStream(path);
+		FileInputStream fis = new FileInputStream(Constants.LoginTestData);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		Sheet sheet = workbook.getSheetAt(0);
 		int lastRow = sheet.getLastRowNum();
 		for (int rownum = 1; rownum <= sheet.getLastRowNum(); rownum++) {
-			seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, "https://165.232.188.80/login", 30);
+			seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
 			CommonUtils.ExcelReader();
 
 			Row row = sheet.getRow(rownum);
