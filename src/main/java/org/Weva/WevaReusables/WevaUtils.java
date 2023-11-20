@@ -15,13 +15,13 @@ import com.Weva.common.utilities.IDriverFactory.BrowserType;
 import com.Weva.common.utilities.IDriverFactory.LocatorType;
 
 public class WevaUtils extends BaseTest {
-
+	
 	static String username = "";
 	static String password = "";
 
 	public void WevaLogin(SeleniumUtilities seleniumUtilities) throws Exception {
-		seleniumUtilities.EnterText(WevaLoginPage.getUsername(), LocatorType.xpath, "sirishapatient@yopmail.com");
-		seleniumUtilities.EnterText(WevaLoginPage.getPassword(), LocatorType.xpath, "Test@1234");
+		seleniumUtilities.EnterText(WevaLoginPage.getUsername(), LocatorType.xpath,properties.getProperty("username"));
+		seleniumUtilities.EnterText(WevaLoginPage.getPassword(), LocatorType.xpath,properties.getProperty("password"));
 		seleniumUtilities.Click(WevaLoginPage.getSubmit(), LocatorType.xpath);
 		Thread.sleep(5000);
 
@@ -34,7 +34,7 @@ public class WevaUtils extends BaseTest {
 		Sheet sheet = workbook.getSheetAt(0);
 		int lastRow = sheet.getLastRowNum();
 		for (int rownum = 1; rownum <= sheet.getLastRowNum(); rownum++) {
-			seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
+			seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, properties.getProperty("Weva_Url"), 30);
 			CommonUtils.ExcelReader();
 
 			Row row = sheet.getRow(rownum);

@@ -1,20 +1,20 @@
 package com.testmethod.programs;
 
-import org.Weva.constants.Constants;
-
 import org.Weva.WevaReusables.WevaUtils;
 import org.Weva.baseclass.BaseTest;
 import org.testng.annotations.AfterTest;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Weva.common.utilities.SeleniumUtilities;
 import com.Weva.common.utilities.IDriverFactory.BrowserType;
-
+@Listeners(com.Weva.common.utilities.ExtentReportListeners.class)
 public class WevaScripts extends BaseTest {
 	SeleniumUtilities seleniumUtilities;
 	WevaUtils wevaUtils;
+	
 
 	static String username = "";
 	static String password = "";
@@ -26,7 +26,9 @@ public class WevaScripts extends BaseTest {
 	@BeforeTest
 	public void browserinvoke()
 	{
-		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
+		
+		
+		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, properties.getProperty("Weva_Url"), 30);
 		
 	}
 	

@@ -2,11 +2,11 @@ package com.testmethod.programs;
 
 import org.Weva.WevaReusables.WevaUtils;
 import org.Weva.baseclass.BaseTest;
-
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Weva.common.utilities.SeleniumUtilities;
-
+@Listeners(com.Weva.common.utilities.ExtentReportListeners.class)
 public class WevaLogin extends BaseTest {
 	SeleniumUtilities seleniumUtilities;
 	WevaUtils wevaUtils;
@@ -20,9 +20,8 @@ public class WevaLogin extends BaseTest {
 
 	@Test
 	public void LoginTest() throws Exception {
-		 String currentDirectory = System.getProperty("user.dir");
+
 		wevaUtils.WevaLogin_muliple(seleniumUtilities);
-		System.out.println("Test Passed successfully");
 
 	}
 
