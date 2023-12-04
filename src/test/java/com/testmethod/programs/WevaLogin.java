@@ -22,7 +22,7 @@ public class WevaLogin extends BaseTest {
 	public void LoginTest() throws Exception {
 
 		wevaUtils.WevaLogin_muliple(seleniumUtilities);
-		System.out.println("Login Successfull");
+		
 
 	}
 
