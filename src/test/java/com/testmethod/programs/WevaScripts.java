@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.Weva.WevaReusables.WevaUtils;
 import org.Weva.baseclass.BaseTest;
+import org.Weva.constants.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -33,7 +34,7 @@ public class WevaScripts extends BaseTest {
 	@BeforeMethod
 	public void browserinvoke() {
 
-		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, properties.getProperty("Weva_Url"), 30);
+		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
 
 	}
 

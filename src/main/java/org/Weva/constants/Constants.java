@@ -13,5 +13,7 @@ public class Constants {
 	public static final int SHORT_WAIT = 3000;
 	public static final int MEDIUM_WAIT = 6000;
 	public static final int LONG_WAIT = 10000;
+	
+	public static final String Weva_Url = "https://3.105.110.219/login";
 
 }
