@@ -23,6 +23,7 @@ public class WevaLogin extends BaseTest {
 
 		wevaUtils.WevaLogin_muliple(seleniumUtilities);
 		
+		
 
 	}
 

@@ -8,8 +8,7 @@ import java.util.Properties;
 
 import org.Weva.constants.Constants;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.AfterClass;
 import com.Weva.common.utilities.ExtentTestReports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -21,9 +20,10 @@ public class BaseTest {
 	public static Properties properties;
 	BufferedReader reader;
 	public static ExtentReports extent = ExtentTestReports.extentReportSetup();
-	public static ExtentTest extentTest; 
+	public static ExtentTest extentTest;
+
 	public BaseTest() {
-		
+
 		try {
 			reader = new BufferedReader(new FileReader(Constants.TestData_Path));
 			properties = new Properties();
@@ -55,10 +55,5 @@ public class BaseTest {
 
 	}
 
-	@BeforeTest
-	public void SetUpLoggers() {
-		// CommonUtils.SetLog4j();
-
-	}
-
+	
 }
