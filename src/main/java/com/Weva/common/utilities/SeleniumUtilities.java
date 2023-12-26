@@ -107,41 +107,31 @@ public class SeleniumUtilities extends BaseTest {
 		return destination;
 	}
 	
-	public void Waitforelementuntilloaded(LocatorType locatorType,String element,Duration timesec) {
-		
-		
-		try {
-		 WebDriverWait wait=new WebDriverWait(driver,timesec);
-		 if(locatorType.equals(LocatorType.id)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.name)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.classname)) {
-			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.cssselector)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.linktext)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.xpath)) {
-			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.partiallinktext)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(element)));
-		 }
-		 else if(locatorType.equals(LocatorType.tagname)) {
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(element)));
-		 }
-
-		}
-		catch(Exception e) {
-			System.out.println(e);
-		}
-	 }
+	public void Waitforelementuntilloaded(LocatorType locatorType, String element, Duration timesec) {
+		/*
+		 * 
+		 * 
+		 * try { WebDriverWait wait=new WebDriverWait(driver,timesec);
+		 * if(locatorType.equals(LocatorType.id)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element))); }
+		 * else if(locatorType.equals(LocatorType.name)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(element)));
+		 * } else if(locatorType.equals(LocatorType.classname)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(element
+		 * ))); } else if(locatorType.equals(LocatorType.cssselector)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+		 * element))); } else if(locatorType.equals(LocatorType.linktext)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(element)
+		 * )); } else if(locatorType.equals(LocatorType.xpath)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
+		 * } else if(locatorType.equals(LocatorType.partiallinktext)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(
+		 * element))); } else if(locatorType.equals(LocatorType.tagname)) {
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(element))
+		 * ); }
+		 * 
+		 * } catch(Exception e) { System.out.println(e); }
+		 */}
 
 
 
