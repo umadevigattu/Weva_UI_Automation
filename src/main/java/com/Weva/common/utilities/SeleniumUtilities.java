@@ -25,8 +25,8 @@ public class SeleniumUtilities extends BaseTest {
 
 	protected IDriverFactory driverFactory = new DriverFactory();
 
-	public SeleniumUtilities(BrowserType browser, String URL, int wait) {
-
+	public SeleniumUtilities(BrowserType browser, String URL, int wait) throws Exception {
+Thread.sleep(5000);
 		driver = driverFactory.CreateWebDriver(browser);
 		driver.get(URL);
 		String title = driver.getTitle();

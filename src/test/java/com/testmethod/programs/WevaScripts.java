@@ -32,7 +32,7 @@ public class WevaScripts extends BaseTest {
 	}
 
 	@BeforeMethod
-	public void browserinvoke() {
+	public void browserinvoke() throws Exception {
 
 		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
 
