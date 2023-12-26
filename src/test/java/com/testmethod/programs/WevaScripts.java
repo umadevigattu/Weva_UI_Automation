@@ -33,7 +33,7 @@ public class WevaScripts extends BaseTest {
 	@BeforeMethod
 	public void browserinvoke() {
 
-		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, properties.getProperty("Weva_Url"), 30);
+		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, "https://3.105.110.219/login", 30);
 
 	}
 
