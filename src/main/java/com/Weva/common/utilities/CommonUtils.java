@@ -14,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class CommonUtils {
 	public static ArrayList<String> list = new ArrayList<String>();
 
-	public static String getCurrentDate() { 
+	public static String getCurrentDate() {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("_ddMMyyyy_HHmmss");
 		Date date = new Date();
 		return dateFormat.format(date);
@@ -22,7 +22,8 @@ public class CommonUtils {
 	}
 
 	public static <list> ArrayList<list> ExcelReader() throws Exception {
-		FileInputStream fis = new FileInputStream(Constants.LoginTestData);
+		String LoginTestData = "C:\\Users\\91944\\Downloads\\Newproject\\Weva_UI_Automation\\InputFiles\\LoginTestData.xlsx";
+		FileInputStream fis = new FileInputStream(LoginTestData);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		Sheet sheet = workbook.getSheetAt(0);
