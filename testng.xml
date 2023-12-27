@@ -4,7 +4,7 @@
 
   <test name="Test">
     <classes>
-      <class name="com.testmethod.programs.WevaScripts"/>
+      <class name="com.testmethod.programs.WevaLogin"/>
  
     </classes>
   </test> <!-- Test -->

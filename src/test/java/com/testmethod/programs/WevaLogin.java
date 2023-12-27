@@ -20,8 +20,9 @@ public class WevaLogin extends BaseTest {
 
 	@Test
 	public void LoginTest() throws Exception {
+		wevaUtils.WevaLogin(seleniumUtilities);
 
-		wevaUtils.WevaLogin_muliple(seleniumUtilities);
+		//wevaUtils.WevaLogin_muliple(seleniumUtilities);
 		
 		
 
