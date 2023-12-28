@@ -32,7 +32,7 @@ public class WevaScripts extends BaseTest {
 	}
 
 	@BeforeMethod
-	public void browserinvoke(){
+	public void browserinvoke() {
 
 		seleniumUtilities = new SeleniumUtilities(BrowserType.chrome, Constants.Weva_Url, 30);
 
@@ -42,6 +42,7 @@ public class WevaScripts extends BaseTest {
 	public void LoginTest_single() throws Exception {
 		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
+		extentTest.info("User Logged in Successfully");
 		WebElement homepage = driver.findElement(By.xpath("//a[text()='Find a Doctor']"));
 		if (homepage.isDisplayed() == true) {
 			softassert.assertEquals(homepage.getText(), "Find a Doctor");
@@ -56,12 +57,13 @@ public class WevaScripts extends BaseTest {
 
 	@Test
 	public void LoginTest_single_two() throws Exception {
-	Thread.sleep(4000);
+		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
+		extentTest.info("User Logged in Successfully");
 		WebElement homepage = driver.findElement(By.xpath("//a[text()='Find a Doctor']"));
 		if (homepage.isDisplayed() == true) {
 			softassert.assertEquals(homepage.getText(), "Find a Doctor");
-			System.out.println("home text is"+homepage.getText());
+			System.out.println("home text is" + homepage.getText());
 			SeleniumUtilities.getScreenshot(driver, "Login_Pass");
 			System.out.println("execution completed on " + Thread.currentThread().getId());
 
@@ -70,15 +72,16 @@ public class WevaScripts extends BaseTest {
 		softassert.assertAll();
 
 	}
-	
+
 	@Test
 	public void Weva_Invalid_Xapth() throws Exception {
-	Thread.sleep(4000);
+		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
+		extentTest.info("User Logged in Successfully");
 		WebElement homepage = driver.findElement(By.xpath("//a[text()='Find a Docto']"));
 		if (homepage.isDisplayed() == true) {
 			softassert.assertEquals(homepage.getText(), "Find a Doctor");
-			System.out.println("home text is"+homepage.getText());
+			System.out.println("home text is" + homepage.getText());
 			SeleniumUtilities.getScreenshot(driver, "Login_Pass");
 			System.out.println("execution completed on " + Thread.currentThread().getId());
 
@@ -87,15 +90,16 @@ public class WevaScripts extends BaseTest {
 		softassert.assertAll();
 
 	}
-	
+
 	@Test
 	public void Weva_Xapth_text_notmatch() throws Exception {
-	Thread.sleep(4000);
+		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
+		extentTest.info("User Logged in Successfully");
 		WebElement homepage = driver.findElement(By.xpath("//a[text()='Find a Doctor']"));
 		if (homepage.isDisplayed() == true) {
 			softassert.assertEquals(homepage.getText(), "Find a Docto");
-			System.out.println("home text is"+homepage.getText());
+			System.out.println("home text is" + homepage.getText());
 			SeleniumUtilities.getScreenshot(driver, "Login_Pass");
 			System.out.println("execution completed on " + Thread.currentThread().getId());
 
