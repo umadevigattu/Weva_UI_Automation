@@ -5,7 +5,6 @@
     <classes>
       <class name="com.testmethod.programs.WevaLogin">
         <methods>
-          <include name="SetUpLoggers"/>
           <include name="LoginTest"/>
         </methods>
       </class> <!-- com.testmethod.programs.WevaLogin -->
