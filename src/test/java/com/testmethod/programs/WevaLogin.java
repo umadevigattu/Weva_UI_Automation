@@ -6,6 +6,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Weva.common.utilities.SeleniumUtilities;
+
 @Listeners(com.Weva.common.utilities.ExtentReportListeners.class)
 public class WevaLogin extends BaseTest {
 	SeleniumUtilities seleniumUtilities;
@@ -20,11 +21,8 @@ public class WevaLogin extends BaseTest {
 
 	@Test
 	public void LoginTest() throws Exception {
-		wevaUtils.WevaLogin(seleniumUtilities);
 
-		//wevaUtils.WevaLogin_muliple(seleniumUtilities);
-		
-		
+		wevaUtils.WevaLogin_muliple(seleniumUtilities);
 
 	}
 
