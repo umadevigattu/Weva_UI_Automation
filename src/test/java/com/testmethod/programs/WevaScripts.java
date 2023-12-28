@@ -73,7 +73,7 @@ public class WevaScripts extends BaseTest {
 
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void Weva_Invalid_Xapth() throws Exception {
 		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
@@ -91,7 +91,7 @@ public class WevaScripts extends BaseTest {
 
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void Weva_Xapth_text_notmatch() throws Exception {
 		Thread.sleep(4000);
 		wevaUtils.WevaLogin(seleniumUtilities);
